@@ -11,3 +11,9 @@ sudo apt-get install -y nodejs
 sudo npm install pm2 -g
 
 sudo apt-get install git-core -y
+
+sudo rm /etc/nginx/sites-available/default
+
+sudo cp nginx.default /etc/nginx/sites-available/default
+
+sudo  service nginx restart
