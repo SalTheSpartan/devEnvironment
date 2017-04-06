@@ -18,5 +18,5 @@ sudo cp nginx.default /etc/nginx/sites-available/default
 
 sudo  service nginx restart
 
-echo "eval `ssh-agent`" >> ~/.bashrc
-echo "ssh-add ~/.ssh/github"  >> ~/.bashrc  
+echo "eval `ssh-agent -s`" >> ~/.bashrc
+echo "ssh-add ~/.ssh/github"  >> ~/.bashrc
