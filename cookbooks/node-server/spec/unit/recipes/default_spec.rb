@@ -36,8 +36,8 @@ describe 'node-server::default' do
     it "checks if node is included" do
       expect(chef_run).to include_recipe 'nodejs'
     end
-    it "checks if pm2 is installed" do
-      expect(chef_run).to include_recipe 'pm2'
+    it 'should install om2 via :npm' do
+      expect(chef_run).to install_nodejs_npm('pm2')
     end
     it "checks if npm is installed" do
       expect(chef_run).to include_recipe 'nodejs::npm'
